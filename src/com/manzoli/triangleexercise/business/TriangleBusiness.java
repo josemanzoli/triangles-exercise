@@ -57,8 +57,9 @@ public class TriangleBusiness {
 		boolean sideOneValidation = triangle.getSideOne() > triangle.getSideTwo() + triangle.getSideThree();
 		boolean sideTwoValidation = triangle.getSideTwo() > triangle.getSideOne() + triangle.getSideThree();
 		boolean sideThreeValidation = triangle.getSideThree() > triangle.getSideTwo() + triangle.getSideOne();
+		boolean zeroValidation = triangle.getSideOne().equals(0) || triangle.getSideTwo().equals(0) || triangle.getSideThree().equals(0);
 		
-		return sideOneValidation || sideTwoValidation || sideThreeValidation;
+		return sideOneValidation || sideTwoValidation || sideThreeValidation || zeroValidation;
 	}
 	
 	/**
